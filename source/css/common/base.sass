@@ -1,39 +1,34 @@
 @charset "utf-8"
 @import "reset"
 @import "compass/css3/images"
+@import "compass/css3/transform"
+@import "compass/css3/transition"
 
 body
-  background: #d4d4d4
   font-family: "游ゴシック","YuGothic","Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro","ＭＳ ゴシック",sans-serif
   line-height: 1.5
+  color: #fff
 
 html, body, #wrapper
   height: 100%
 
 .colorful-bg
   height: 100%
-  +background-image(linear-gradient(45deg, hsla(61, 98%, 48%, 1) 0%, hsla(61, 98%, 48%, 0) 70%), linear-gradient(315deg, hsla(355, 99%, 43%, 1) 10%, hsla(355, 99%, 43%, 0) 80%), linear-gradient(225deg, hsla(325, 91%, 50%, 1) 10%, hsla(325, 91%, 50%, 0) 80%), linear-gradient(135deg, hsla(265, 99%, 49%, 1) 100%, hsla(265, 99%, 49%, 0) 70%))
+  //+background-image(linear-gradient(45deg, hsla(61, 98%, 48%, 1) 0%, hsla(61, 98%, 48%, 0) 70%), linear-gradient(315deg, hsla(355, 99%, 43%, 1) 10%, hsla(355, 99%, 43%, 0) 80%), linear-gradient(225deg, hsla(325, 91%, 50%, 1) 10%, hsla(325, 91%, 50%, 0) 80%), linear-gradient(135deg, hsla(265, 99%, 49%, 1) 100%, hsla(265, 99%, 49%, 0) 70%))
 
-
-//  .colorful {
-//  background:
-//  -webkit-linear-gradient(45deg, hsla(61, 98%, 48%, 1) 0%, hsla(61, 98%, 48%, 0) 70%),
-//  -webkit-linear-gradient(315deg, hsla(355, 99%, 43%, 1) 10%, hsla(355, 99%, 43%, 0) 80%),
-//  -webkit-linear-gradient(225deg, hsla(325, 91%, 50%, 1) 10%, hsla(325, 91%, 50%, 0) 80%),
-//  -webkit-linear-gradient(135deg, hsla(265, 99%, 49%, 1) 100%, hsla(265, 99%, 49%, 0) 70%);
-//  background:
-//  linear-gradient(45deg, hsla(61, 98%, 48%, 1) 0%, hsla(61, 98%, 48%, 0) 70%),
-//  linear-gradient(135deg, hsla(355, 99%, 43%, 1) 10%, hsla(355, 99%, 43%, 0) 80%),
-//  linear-gradient(225deg, hsla(325, 91%, 50%, 1) 10%, hsla(325, 91%, 50%, 0) 80%),
-//  linear-gradient(315deg, hsla(265, 99%, 49%, 1) 100%, hsla(265, 99%, 49%, 0) 70%);
-//}
-
-
+  +background-image(linear-gradient(45deg, hsla(192, 94%, 48%, 1) 0%, hsla(192, 94%, 48%, 0) 70%), linear-gradient(135deg, hsla(38, 97%, 43%, 1) 10%, hsla(38, 97%, 43%, 0) 80%), linear-gradient(225deg, hsla(280, 97%, 50%, 1) 10%, hsla(280, 97%, 50%, 0) 80%), linear-gradient(315deg, hsla(43, 96%, 44%, 1) 100%, hsla(43, 96%, 44%, 0) 70%))
 
 a
   &:hover
     text-decoration: none
     background: rgba(187, 204, 38, 0.30)
+
+  color: #fff
+
+#wrapper
+  max-width: 800px
+  margin: auto
+
 
 
 #renderer
@@ -42,9 +37,6 @@ a
 
 .indexWelcome
   padding: 2em 1em
-  max-width: 800px
-  margin: auto
-
 
   .indexWelcome__title
     font-weight: bold
@@ -56,8 +48,11 @@ a
     margin-bottom: 1em
 
 
+
+$border_color: #ddd
+
 .case-section
-  border: 1px solid #666
+  border: 1px solid $border_color
   padding: 1em 2em
   .case-section__title
     font-size: 1.5em
@@ -67,12 +62,37 @@ a
 .case-navigation
 
   .case-navigation__item
-    border-bottom: 1px solid #cccccc
+    border-bottom: 1px solid $border_color
     a
-      color: #333
       text-decoration: none
+      display: block
+      width: 100%
+      height: 100%
+      padding: 1em 0
+      &:hover
+        background-color: rgba(255,255,255, 0.1)
 
 .case-cell
+  position: relative
+  &:after
+    content: ''
+    display: block
+    border-bottom: 2px solid $border_color
+    border-right: 2px solid $border_color
+    width:  8px
+    height: 8px
+    position: absolute
+    right: 14px
+    top: 50%
+    +rotate(-45deg)
+  &:hover
+    &:after
+      right: 10px
+      +single-transition(right, 0.2s)
+
+
+
+
   .case-cell__title
     font-size: 1.25em
     margin-bottom: 0.2em
