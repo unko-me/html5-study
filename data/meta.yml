@@ -1,0 +1,29 @@
+url: &url
+  'http://unko-me.github.io/html5-study/'
+title: &title
+  'HTML5で導入されてる新機能のテストをしてます'
+description: &description
+  'HTML5で導入されてる新機能で極めてまじめに勉強したものを習作としておサーバーにアップしています'
+keywords: &keywords
+  'My Site keywords,keyword'
+
+twitter:
+  lang: 'ja'
+  hashtags: 'unko_me'
+  site: *title
+  text: *description
+#  text: "#{*title} #{*description}" # 無理
+#  text: *title + ' | ' + *description # 無理
+line:
+  text: *title
+  link: *url
+fb:
+  app_id: '1234'
+og:
+  locale: 'ja_JP'
+  images: ['http://unko-me.github.io/threejs-study/img/katapad/yes_02.png']
+  url: *url
+  title: *title
+  site_name: *title
+  description: *description
+  type: 'website'

@@ -1,0 +1,14 @@
+
+#renderer
+
+.testRectangle
+#testControl
+  button#testButton1 普通に読み込み
+  button#testButton2 workerで読み込み
+#parent
+  textarea#parentText
+#child
+  textarea#childText
+== javascript_include_tag "three.lib"
+/== javascript_include_tag "velocity/velocity.min.js"
+== javascript_include_tag "pages/worker/WorkerTest2"
