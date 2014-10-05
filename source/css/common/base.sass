@@ -8,15 +8,18 @@ body
   font-family: "游ゴシック","YuGothic","Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro","ＭＳ ゴシック",sans-serif
   line-height: 1.5
   color: #fff
+  min-height: 100%
 
-html, body
+html
   height: 100%
 
 .colorful-bg
-  height: 100%
+  //height: 100%
   //+background-image(linear-gradient(45deg, hsla(61, 98%, 48%, 1) 0%, hsla(61, 98%, 48%, 0) 70%), linear-gradient(315deg, hsla(355, 99%, 43%, 1) 10%, hsla(355, 99%, 43%, 0) 80%), linear-gradient(225deg, hsla(325, 91%, 50%, 1) 10%, hsla(325, 91%, 50%, 0) 80%), linear-gradient(135deg, hsla(265, 99%, 49%, 1) 100%, hsla(265, 99%, 49%, 0) 70%))
 
   +background-image(linear-gradient(45deg, hsla(192, 94%, 48%, 1) 0%, hsla(192, 94%, 48%, 0) 70%), linear-gradient(135deg, hsla(38, 97%, 43%, 1) 10%, hsla(38, 97%, 43%, 0) 80%), linear-gradient(225deg, hsla(280, 97%, 50%, 1) 10%, hsla(280, 97%, 50%, 0) 80%), linear-gradient(315deg, hsla(43, 96%, 44%, 1) 100%, hsla(43, 96%, 44%, 0) 70%))
+  background-size: contain
+  background-attachment: fixed
 
 a
   &:hover
@@ -126,4 +129,37 @@ $border_color: #ddd
   a
     margin: 1em
 
+
+
+
+//個別ページのやつ
+.sample-description
+  padding-top: 2em
+  padding-bottom: 1em
+  margin-bottom: 2em
+  h1
+    font-size: 1.5em
+    margin-bottom: 1.5em
+
+  p
+    margin-bottom: 0.8em
+
+
+.code-block
+  border: 1px solid $border_color
+  padding: 0.5em 0.3em
+  margin-bottom: 1em
+  iframe
+    width: 100%
+    height: auto
+    font-family: "consolas", "courier new", monospace
+
+    &.h200
+      height: 200px
+
+    &.h300
+      height: 300px
+
+    &.h400
+      height: 400px
 

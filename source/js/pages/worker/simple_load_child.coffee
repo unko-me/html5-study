@@ -7,4 +7,5 @@ addEventListener('message', (e)->
 )
 
 console.log '[child] eof'
+
 postMessage({type: 'eof'})

@@ -1,5 +1,21 @@
 
-h1 ロードするだけのテスト
+section.sample-description
+  h1 ロードするだけのテスト。Consoleを開いて確認してください。
+
+  p new Worker('hoge.js')は非同期的に読みこむ(ブロックしない)が、実行時は非同期的に読み込んでいる。
+
+  p このサンプルでは<a href='../../js/pages/worker/simpleLoad.js'>simpleLoad.js</a>から<a href='../../js/pages/worker/simple_load_child.js'>simple_load_child.js</a>を読み込んでいる。
+
+  p workerの読み込みが終わるまえに、parent側のコードは実行されつつも、parent側から送った<code>worker.postMessage({type: 'init'})</code>はきちんと実行されている。
+
+
+  .code-block
+    .code-block__title parent側のjs
+    iframe.h400 src='../../js/pages/worker/simpleLoad.js'
+  .code-block
+    .code-block__title child側のjs
+    iframe.h400 src='../../js/pages/worker/simple_load_child.js'
+
 
 == javascript_include_tag "lib/lib"
 == javascript_include_tag "pages/worker/simpleLoad"
