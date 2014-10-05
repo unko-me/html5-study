@@ -1,0 +1,1 @@
+(function(){console.log("[child] first"),postMessage({type:"first"}),addEventListener("message",function(e){var o;return o=e.data,console.log("[child] type",o.type)}),console.log("[child] eof"),postMessage({type:"eof"})}).call(this);

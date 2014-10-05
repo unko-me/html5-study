@@ -1,0 +1,1 @@
+(function(){var t;t=function(){function t(){}return t.prototype.start=function(){var t;return console.log("[parent] start"),t=new Worker("../../js/pages/worker/simple_load_child.js"),t.addEventListener("message",function(t){return console.log("[parent]",t.data.type)}),t.postMessage({type:"init"})},t}(),(new t).start()}).call(this);
