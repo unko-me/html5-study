@@ -2,7 +2,7 @@
 #= require './Preloader'
 
 class WorkerTest2
-  constructor: (args) ->
+  constructor: () ->
     console.log '[WorkerTest2]'
 
 

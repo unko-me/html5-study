@@ -6,14 +6,19 @@ class WorkerTest1
       alert('WebWorkerないです！')
       return
 
-    console.log '[WorkerTest1] workerあります。workerのjsを読み込みます。'
-
     console.log '[WorkerTest1] 読み込み開始1'
     console.time('new')
     console.time('new1')
     worker = new Worker("../../js/pages/worker/child1.js")
+
+    #onloadイベントはないので、自力でworker
+#    worker.addEventListener('load', =>
+#      console.log 'onload'
+#    )
+
     console.timeEnd('new1')
     console.log '[WorkerTest1] 読み込み開始2'
+    worker.postMessage({type: 'init'})
 
 
 
