@@ -1,1 +1,19 @@
-(function(){console.log("[child] 1\u884c\u76ee\u3067\u3059\u3002\u975e\u540c\u671f\u306b\u306a\u3063\u3066\u307e\u3059"),addEventListener("message",function(e){var t;return t=Date.now()-e.data.startTime,console.log("[child1] on message \u53d7\u3051\u53d6\u308a\u6642\u9593",""+t+"ms"),postMessage({type:"getlargedata"})}),postMessage({type:"init",hoge:"fuga",time:Date.now()})}).call(this);
+(function() {
+  console.log('[child] 1行目です。非同期になってます');
+
+  addEventListener('message', function(e) {
+    var diff;
+    diff = Date.now() - e.data.startTime;
+    console.log('[child1] on message 受け取り時間', "" + diff + "ms");
+    return postMessage({
+      type: 'getlargedata'
+    });
+  });
+
+  postMessage({
+    type: 'init',
+    hoge: 'fuga',
+    time: Date.now()
+  });
+
+}).call(this);

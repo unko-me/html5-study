@@ -1,1 +1,143 @@
-(function(){var t,e=function(t,e){return function(){return t.apply(e,arguments)}};t=function(){function t(){this.loadComplete=e(this.loadComplete,this),this.loadWithXHR=e(this.loadWithXHR,this),this.workerHandler=e(this.workerHandler,this),this.loadWithWorker=e(this.loadWithWorker,this),this.start=e(this.start,this),this.enableWorker=!!window.Worker}return t.prototype.WORKER_CORE_JS="../../js/pages/worker/worker_loader.js",t.prototype.count=0,t.prototype.start=function(t){var e,o,r,n;if(this.urls=t,this.total=this.urls.length,0!==this.total)if(this.enableWorker)this.loadWithWorker(this.urls);else for(n=this.urls,o=0,r=n.length;r>o;o++)e=n[o],this.loadWithXHR(e)},t.prototype.loadWithWorker=function(){this.worker=new Worker(this.WORKER_CORE_JS),this.worker.onmessage=this.workerHandler,this.worker.postMessage(this.urls)},t.prototype.workerHandler=function(t){switch(t.data){case"end":this.worker.terminate(),this.loadComplete();break;case"next":this.loadComplete()}},t.prototype.loadWithXHR=function(t){this.xhr=new XMLHttpRequest,this.xhr.open("GET",t,!1),this.xhr.onreadystatechange=function(t){return function(){return 4===t.xhr.readyState?t.loadComplete():void 0}}(this),this.xhr.send(null)},t.prototype.loadComplete=function(){this.count++,console.log("loadcomplete"),this.count>=this.total&&console.log("\u5168\u90e8\u8aad\u307f\u8fbc\u307f\u7d42\u308f\u3063\u305f")},t}(),"function"==typeof define&&define.amd?define(function(){return t}):"object"==typeof exports?exports.Preloader=t:window.Preloader=t}).call(this),function(){var t;new(t=function(){function t(){var t;console.log("[WorkerTest2]"),this._list=function(){var e,o;for(o=[],t=e=0;180>e;t=++e)o.push(t="../../../img/worker/dmy/"+t+".png");return o}(),$(".testRectangle").velocity({rotateZ:"360deg"},{duration:2e3,loop:!0}),$("#testButton1").click(function(t){return function(){return _.each(t._list,function(t){var e;return e=new XMLHttpRequest,e.open("GET",t,!1),e.onreadystatechange=function(){return function(){return 4===e.readyState?console.log("load complete"):void 0}}(this),e.send(null)})}}(this)),$("#testButton2").click(function(t){return function(){var e;return e=new Preloader,e.start(t._list)}}(this))}return t}())}.call(this);
+(function() {
+  var Preloader,
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+
+  Preloader = (function() {
+    Preloader.prototype.WORKER_CORE_JS = "../../js/pages/worker/worker_loader.js";
+
+    Preloader.prototype.count = 0;
+
+    function Preloader() {
+      this.loadComplete = __bind(this.loadComplete, this);
+      this.loadWithXHR = __bind(this.loadWithXHR, this);
+      this.workerHandler = __bind(this.workerHandler, this);
+      this.loadWithWorker = __bind(this.loadWithWorker, this);
+      this.start = __bind(this.start, this);
+      this.enableWorker = !!window.Worker;
+      return;
+    }
+
+    Preloader.prototype.start = function(urls) {
+      var val, _i, _len, _ref;
+      this.urls = urls;
+      this.total = this.urls.length;
+      if (this.total !== 0) {
+        if (this.enableWorker) {
+          this.loadWithWorker(this.urls);
+        } else {
+          _ref = this.urls;
+          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+            val = _ref[_i];
+            this.loadWithXHR(val);
+          }
+        }
+      }
+    };
+
+    Preloader.prototype.loadWithWorker = function(urls) {
+      this.worker = new Worker(this.WORKER_CORE_JS);
+      this.worker.onmessage = this.workerHandler;
+      this.worker.postMessage(this.urls);
+    };
+
+    Preloader.prototype.workerHandler = function(e) {
+      switch (e.data) {
+        case "end":
+          this.worker.terminate();
+          this.loadComplete();
+          break;
+        case "next":
+          this.loadComplete();
+      }
+    };
+
+    Preloader.prototype.loadWithXHR = function(url) {
+      this.xhr = new XMLHttpRequest();
+      this.xhr.open("GET", url, false);
+      this.xhr.onreadystatechange = (function(_this) {
+        return function(data) {
+          if (_this.xhr.readyState === 4) {
+            return _this.loadComplete();
+          }
+        };
+      })(this);
+      this.xhr.send(null);
+    };
+
+    Preloader.prototype.loadComplete = function() {
+      this.count++;
+      console.log('loadcomplete');
+      if (this.count >= this.total) {
+        console.log("全部読み込み終わった");
+      }
+    };
+
+    return Preloader;
+
+  })();
+
+  if (typeof define === "function" && define.amd) {
+    define(function() {
+      return Preloader;
+    });
+  } else if (typeof exports === "object") {
+    exports.Preloader = Preloader;
+  } else {
+    window.Preloader = Preloader;
+  }
+
+}).call(this);
+(function() {
+  var WorkerTest2;
+
+  WorkerTest2 = (function() {
+    function WorkerTest2() {
+      var i;
+      console.log('[WorkerTest2]');
+      this._list = (function() {
+        var _i, _results;
+        _results = [];
+        for (i = _i = 0; _i < 180; i = ++_i) {
+          _results.push(i = '../../../img/worker/dmy/' + i + '.png');
+        }
+        return _results;
+      })();
+      $('.testRectangle').velocity({
+        'rotateZ': "360deg"
+      }, {
+        duration: 2000,
+        loop: true
+      });
+      $('#testButton1').click((function(_this) {
+        return function() {
+          return _.each(_this._list, function(url) {
+            var xhr;
+            xhr = new XMLHttpRequest();
+            xhr.open("GET", url, false);
+            xhr.onreadystatechange = (function(_this) {
+              return function(data) {
+                if (xhr.readyState === 4) {
+                  return console.log('load complete');
+                }
+              };
+            })(this);
+            return xhr.send(null);
+          });
+        };
+      })(this));
+      $('#testButton2').click((function(_this) {
+        return function() {
+          var preloader;
+          preloader = new Preloader();
+          return preloader.start(_this._list);
+        };
+      })(this));
+    }
+
+    return WorkerTest2;
+
+  })();
+
+  new WorkerTest2();
+
+}).call(this);

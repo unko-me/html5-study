@@ -1,1 +1,31 @@
-(function(){var t;t=function(){function t(){}return t.prototype.start=function(){var t;return console.log("[parent] start"),t=new Worker("../../js/pages/worker/simple_load_child.js"),t.addEventListener("message",function(t){return console.log("[parent]",t.data.type)}),t.postMessage({type:"init"})},t}(),(new t).start()}).call(this);
+(function() {
+  var SimpleLoad;
+
+  SimpleLoad = (function() {
+    function SimpleLoad(args) {}
+
+    SimpleLoad.prototype.start = function() {
+      var worker;
+      console.log('[parent] start');
+      worker = new Worker("../../js/pages/worker/simple_load_child.js");
+      console.log('[parent] addEventListener');
+      worker.addEventListener('message', function(e) {
+        console.log('[parent]', e.data.type);
+        return worker.postMessage({
+          type: 'receive'
+        });
+      });
+      console.log('[parent] before postMessage("init")');
+      worker.postMessage({
+        type: 'init'
+      });
+      return console.log('[parent] after postMessage("init")');
+    };
+
+    return SimpleLoad;
+
+  })();
+
+  new SimpleLoad().start();
+
+}).call(this);

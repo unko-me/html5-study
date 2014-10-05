@@ -1,1 +1,226 @@
-@charset "UTF-8";html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}img{vertical-align:top}body{font-family:Roboto, "Droid Sans", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", "メイリオ", "ＭＳ Ｐゴシック", sans-serif}body{font-family:"游ゴシック", "YuGothic", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ＭＳ ゴシック", sans-serif;line-height:1.5;color:white}html,body{height:100%}.colorful-bg{height:100%;background-image:-webkit-linear-gradient(45deg, #07bfed 0%, rgba(7,191,237,0) 70%),-webkit-linear-gradient(135deg, #d88a03 10%, rgba(216,138,3,0) 80%),-webkit-linear-gradient(225deg, #a904fb 10%, rgba(169,4,251,0) 80%),-webkit-linear-gradient(315deg, #dc9f04 100%, rgba(220,159,4,0) 70%);background-image:-moz-linear-gradient(45deg, #07bfed 0%, rgba(7,191,237,0) 70%),-moz-linear-gradient(135deg, #d88a03 10%, rgba(216,138,3,0) 80%),-moz-linear-gradient(225deg, #a904fb 10%, rgba(169,4,251,0) 80%),-moz-linear-gradient(315deg, #dc9f04 100%, rgba(220,159,4,0) 70%);background-image:-o-linear-gradient(45deg, #07bfed 0%, rgba(7,191,237,0) 70%),-o-linear-gradient(135deg, #d88a03 10%, rgba(216,138,3,0) 80%),-o-linear-gradient(225deg, #a904fb 10%, rgba(169,4,251,0) 80%),-o-linear-gradient(315deg, #dc9f04 100%, rgba(220,159,4,0) 70%);background-image:linear-gradient(45deg, #07bfed 0%,rgba(7,191,237,0) 70%),linear-gradient(135deg, #d88a03 10%,rgba(216,138,3,0) 80%),linear-gradient(225deg, #a904fb 10%,rgba(169,4,251,0) 80%),linear-gradient(315deg, #dc9f04 100%,rgba(220,159,4,0) 70%)}a{color:white}a:hover{text-decoration:none;background:rgba(187,204,38,0.3)}#wrapper{max-width:800px;margin:auto}#renderer{width:100%}.indexWelcome{padding:2em 1em}.indexWelcome .indexWelcome__title{font-weight:bold;font-size:2em;margin-bottom:1.5em;line-height:1}.indexWelcome li{margin-bottom:1em}.case-section{border:1px solid #dddddd;padding:1em 2em}.case-section .case-section__title{font-size:1.5em;margin-bottom:1em}.case-navigation .case-navigation__item{border-bottom:1px solid #dddddd}.case-navigation .case-navigation__item a{text-decoration:none;display:block;width:100%;height:100%;padding:1em 0}.case-navigation .case-navigation__item a:hover{background-color:rgba(255,255,255,0.1)}.case-cell{position:relative}.case-cell:after{content:"";display:block;border-bottom:2px solid #dddddd;border-right:2px solid #dddddd;width:8px;height:8px;position:absolute;right:14px;top:50%;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg)}.case-cell:hover:after{right:10px;-webkit-transition:right 0.2s;-moz-transition:right 0.2s;-o-transition:right 0.2s;transition:right 0.2s}.case-cell .case-cell__title{font-size:1.25em;margin-bottom:0.2em}.testRectangle{border-radius:10px;width:100px;height:100px;background-color:#990000}#testControl{margin:100px}#globalFooter{margin-top:2em;padding-top:1em;padding-bottom:1em;opacity:0.7;background-image:-webkit-linear-gradient(45deg, #093e38 0%, rgba(9,62,56,0) 70%),-webkit-linear-gradient(135deg, #472910 10%, rgba(71,41,16,0) 80%),-webkit-linear-gradient(225deg, #4d0255 10%, rgba(77,2,85,0) 80%),-webkit-linear-gradient(315deg, #23470a 100%, rgba(35,71,10,0) 70%);background-image:-moz-linear-gradient(45deg, #093e38 0%, rgba(9,62,56,0) 70%),-moz-linear-gradient(135deg, #472910 10%, rgba(71,41,16,0) 80%),-moz-linear-gradient(225deg, #4d0255 10%, rgba(77,2,85,0) 80%),-moz-linear-gradient(315deg, #23470a 100%, rgba(35,71,10,0) 70%);background-image:-o-linear-gradient(45deg, #093e38 0%, rgba(9,62,56,0) 70%),-o-linear-gradient(135deg, #472910 10%, rgba(71,41,16,0) 80%),-o-linear-gradient(225deg, #4d0255 10%, rgba(77,2,85,0) 80%),-o-linear-gradient(315deg, #23470a 100%, rgba(35,71,10,0) 70%);background-image:linear-gradient(45deg, #093e38 0%,rgba(9,62,56,0) 70%),linear-gradient(135deg, #472910 10%,rgba(71,41,16,0) 80%),linear-gradient(225deg, #4d0255 10%,rgba(77,2,85,0) 80%),linear-gradient(315deg, #23470a 100%,rgba(35,71,10,0) 70%)}#globalFooter a{margin:1em}
+@charset "UTF-8";
+/* line 17, /Volumes/SHARED/projects/katapad/study/html5/vendor/bundle/ruby/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, /Volumes/SHARED/projects/katapad/study/html5/vendor/bundle/ruby/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, /Volumes/SHARED/projects/katapad/study/html5/vendor/bundle/ruby/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, /Volumes/SHARED/projects/katapad/study/html5/vendor/bundle/ruby/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, /Volumes/SHARED/projects/katapad/study/html5/vendor/bundle/ruby/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, /Volumes/SHARED/projects/katapad/study/html5/vendor/bundle/ruby/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, /Volumes/SHARED/projects/katapad/study/html5/vendor/bundle/ruby/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, /Volumes/SHARED/projects/katapad/study/html5/vendor/bundle/ruby/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, /Volumes/SHARED/projects/katapad/study/html5/vendor/bundle/ruby/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* line 6, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/_reset.sass */
+img {
+  vertical-align: top; }
+
+/* line 3, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/_reset.sass */
+body {
+  font-family: Roboto, "Droid Sans", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", "メイリオ", "ＭＳ Ｐゴシック", sans-serif; }
+
+/* line 7, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+body {
+  font-family: "游ゴシック", "YuGothic", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ＭＳ ゴシック", sans-serif;
+  line-height: 1.5;
+  color: white;
+  min-height: 100%; }
+
+/* line 13, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+html {
+  height: 100%; }
+
+/* line 16, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+.colorful-bg {
+  background-image: -webkit-linear-gradient(45deg, #07bfed 0%, rgba(7, 191, 237, 0) 70%), -webkit-linear-gradient(135deg, #d88a03 10%, rgba(216, 138, 3, 0) 80%), -webkit-linear-gradient(225deg, #a904fb 10%, rgba(169, 4, 251, 0) 80%), -webkit-linear-gradient(315deg, #dc9f04 100%, rgba(220, 159, 4, 0) 70%);
+  background-image: -moz-linear-gradient(45deg, #07bfed 0%, rgba(7, 191, 237, 0) 70%), -moz-linear-gradient(135deg, #d88a03 10%, rgba(216, 138, 3, 0) 80%), -moz-linear-gradient(225deg, #a904fb 10%, rgba(169, 4, 251, 0) 80%), -moz-linear-gradient(315deg, #dc9f04 100%, rgba(220, 159, 4, 0) 70%);
+  background-image: -o-linear-gradient(45deg, #07bfed 0%, rgba(7, 191, 237, 0) 70%), -o-linear-gradient(135deg, #d88a03 10%, rgba(216, 138, 3, 0) 80%), -o-linear-gradient(225deg, #a904fb 10%, rgba(169, 4, 251, 0) 80%), -o-linear-gradient(315deg, #dc9f04 100%, rgba(220, 159, 4, 0) 70%);
+  background-image: linear-gradient(45deg, #07bfed 0%, rgba(7, 191, 237, 0) 70%), linear-gradient(135deg, #d88a03 10%, rgba(216, 138, 3, 0) 80%), linear-gradient(225deg, #a904fb 10%, rgba(169, 4, 251, 0) 80%), linear-gradient(315deg, #dc9f04 100%, rgba(220, 159, 4, 0) 70%);
+  background-size: contain;
+  background-attachment: fixed; }
+
+/* line 24, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+a {
+  color: white; }
+  /* line 25, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+  a:hover {
+    text-decoration: none;
+    background: rgba(187, 204, 38, 0.3); }
+
+/* line 31, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+#wrapper {
+  max-width: 800px;
+  margin: auto; }
+
+/* line 37, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+#renderer {
+  width: 100%; }
+
+/* line 41, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+.indexWelcome {
+  padding: 2em 1em; }
+  /* line 44, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+  .indexWelcome .indexWelcome__title {
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 1.5em;
+    line-height: 1; }
+  /* line 50, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+  .indexWelcome li {
+    margin-bottom: 1em; }
+
+/* line 57, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+.case-section {
+  border: 1px solid #dddddd;
+  padding: 1em 2em; }
+  /* line 60, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+  .case-section .case-section__title {
+    font-size: 1.5em;
+    margin-bottom: 1em; }
+
+/* line 67, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+.case-navigation .case-navigation__item {
+  border-bottom: 1px solid #dddddd; }
+  /* line 69, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+  .case-navigation .case-navigation__item a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 1em 0; }
+    /* line 75, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+    .case-navigation .case-navigation__item a:hover {
+      background-color: rgba(255, 255, 255, 0.1); }
+
+/* line 78, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+.case-cell {
+  position: relative; }
+  /* line 80, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+  .case-cell:after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid #dddddd;
+    border-right: 2px solid #dddddd;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  /* line 92, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+  .case-cell:hover:after {
+    right: 10px;
+    -webkit-transition: right 0.2s;
+    -moz-transition: right 0.2s;
+    -o-transition: right 0.2s;
+    transition: right 0.2s; }
+  /* line 99, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+  .case-cell .case-cell__title {
+    font-size: 1.25em;
+    margin-bottom: 0.2em; }
+
+/* line 109, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+.testRectangle {
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: #990000; }
+
+/* line 115, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+#testControl {
+  margin: 100px; }
+
+/* line 121, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+#globalFooter {
+  margin-top: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  opacity: 0.7;
+  background-image: -webkit-linear-gradient(45deg, #093e38 0%, rgba(9, 62, 56, 0) 70%), -webkit-linear-gradient(135deg, #472910 10%, rgba(71, 41, 16, 0) 80%), -webkit-linear-gradient(225deg, #4d0255 10%, rgba(77, 2, 85, 0) 80%), -webkit-linear-gradient(315deg, #23470a 100%, rgba(35, 71, 10, 0) 70%);
+  background-image: -moz-linear-gradient(45deg, #093e38 0%, rgba(9, 62, 56, 0) 70%), -moz-linear-gradient(135deg, #472910 10%, rgba(71, 41, 16, 0) 80%), -moz-linear-gradient(225deg, #4d0255 10%, rgba(77, 2, 85, 0) 80%), -moz-linear-gradient(315deg, #23470a 100%, rgba(35, 71, 10, 0) 70%);
+  background-image: -o-linear-gradient(45deg, #093e38 0%, rgba(9, 62, 56, 0) 70%), -o-linear-gradient(135deg, #472910 10%, rgba(71, 41, 16, 0) 80%), -o-linear-gradient(225deg, #4d0255 10%, rgba(77, 2, 85, 0) 80%), -o-linear-gradient(315deg, #23470a 100%, rgba(35, 71, 10, 0) 70%);
+  background-image: linear-gradient(45deg, #093e38 0%, rgba(9, 62, 56, 0) 70%), linear-gradient(135deg, #472910 10%, rgba(71, 41, 16, 0) 80%), linear-gradient(225deg, #4d0255 10%, rgba(77, 2, 85, 0) 80%), linear-gradient(315deg, #23470a 100%, rgba(35, 71, 10, 0) 70%); }
+  /* line 129, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+  #globalFooter a {
+    margin: 1em; }
+
+/* line 136, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+.sample-description {
+  padding-top: 2em;
+  padding-bottom: 1em;
+  margin-bottom: 2em; }
+  /* line 140, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+  .sample-description h1 {
+    font-size: 1.5em;
+    margin-bottom: 1.5em; }
+  /* line 144, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+  .sample-description p {
+    margin-bottom: 0.8em; }
+
+/* line 148, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+.code-block {
+  border: 1px solid #dddddd;
+  padding: 0.5em 0.3em;
+  margin-bottom: 1em; }
+  /* line 152, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+  .code-block iframe {
+    width: 100%;
+    height: auto;
+    font-family: "consolas", "courier new", monospace; }
+    /* line 157, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+    .code-block iframe.h200 {
+      height: 200px; }
+    /* line 160, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+    .code-block iframe.h300 {
+      height: 300px; }
+    /* line 163, /Volumes/SHARED/projects/katapad/study/html5/source/css/common/base.sass */
+    .code-block iframe.h400 {
+      height: 400px; }
